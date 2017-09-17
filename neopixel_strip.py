@@ -99,9 +99,6 @@ def ribbon_right_to_left(pixel_count, red=10, green=10, blue=10, speed=0.5):
     lightsoff()
 
 
-print('hello, world!')
-
-
 def demo():
     x = 1
     while 0:
@@ -162,6 +159,3 @@ def demo():
         # allwhite()
         # sleep(.1)
         x = 0
-
-
-demo()
