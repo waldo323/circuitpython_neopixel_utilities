@@ -20,7 +20,6 @@ def allwhite():
 
 
 def lowwhite():
-
     for x in list(range(0, strand_length)):
         pixels[x] = (5, 5, 5)
         pixels.show()
