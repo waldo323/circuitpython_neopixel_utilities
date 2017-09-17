@@ -1,4 +1,3 @@
-
 import board
 import neopixel
 from time import sleep
