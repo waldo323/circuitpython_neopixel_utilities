@@ -32,7 +32,7 @@ def lightup(pixel, red, green, blue):
 
 def randlights():
     # while 1:
-    lightnum = random.randint(0, 9)
+    lightnum = random.randint(0, strand_length-1)
 
     red = random.randint(0, 5)
     green = random.randint(0, 5)
