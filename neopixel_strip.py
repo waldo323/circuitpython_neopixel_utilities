@@ -97,12 +97,11 @@ def ribbon_right_to_left(pixel_count, red=10, green=10, blue=10, speed=0.5):
     lightsoff()
 
 
-def demo():
-    x = 1
-    while 0:
+def demo(demo_runs=1):
+    if demo_runs == 0:
         lightsoff()
 
-    while x:
+    while demo_runs:
         ribbon(2, 20, 20, 10, 5)
         sleep(2)
         ribbon_left_to_right(pixel_count=3, red=0, green=0, blue=20)
@@ -156,4 +155,4 @@ def demo():
         sleep(2)
         # allwhite()
         # sleep(.1)
-        x = 0
+        demo_runs = demo_runs - 1
