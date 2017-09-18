@@ -1,4 +1,4 @@
-# circuit_python_neopixel_strip
+# circuitpython_neopixel_strip
 library for manipulating a strip of NeoPixels 
 
 The code assumes a strand length of 10 pixels.
