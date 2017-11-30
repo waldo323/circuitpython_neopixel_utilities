@@ -6,7 +6,7 @@ This may(should be) be changed to an input as the library progresses.
 
 requires:
 * software:
-  * for my Circuitplayground express:
+  * for my Circuit Playground Express:
     * Cirtuit Python (I am using 2.1.0 )
     * the express library in the \lib\adafruit_circuitplayground from the circuit python bundle
       * https://github.com/adafruit/Adafruit_CircuitPython_Bundle
