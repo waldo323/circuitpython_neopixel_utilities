@@ -9,7 +9,9 @@ class neopixel_strip:
     def __init__(self, strand_length=10, pin_placement=board.NEOPIXEL):
         # alternatively board.D6
         self.strand_length = strand_length
-        self.pixels = neopixel.NeoPixel(pin_placement, self.strand_length, auto_write=False)
+        self.pixels = neopixel.NeoPixel(pin_placement,
+                                        self.strand_length,
+                                        auto_write=False)
 
     def lightsoff(self):
         for x in list(range(0, self.strand_length)):
@@ -64,14 +66,23 @@ class neopixel_strip:
             self.lightup(4-x, red, green, blue)
             time.sleep(.1)
 
-    def ribbon(self, pixel_count=1, red=10, green=10, blue=10, start_position=0):
+    def ribbon(self,
+               pixel_count=1,
+               red=10, green=10,
+               blue=10,
+               start_position=0):
         self.lightsoff()
         for x in list(range(0, pixel_count)):
             # print(x+start_position)
             if (x+start_position) < self.strand_length:
                 self.lightup(x + start_position, red, green, blue)
 
-    def ribbon_left_to_right(self, pixel_count, red=10, green=10, blue=10, speed=0.5):
+    def ribbon_left_to_right(self,
+                             pixel_count,
+                             red=10,
+                             green=10,
+                             blue=10,
+                             speed=0.5):
         self.lightsoff()
 
         for pos in list(range(0, self.strand_length)):
@@ -81,9 +92,15 @@ class neopixel_strip:
 
         self.lightsoff()
 
-    def ribbon_right_to_left(self, pixel_count, red=10, green=10, blue=10, speed=0.5):
+    def ribbon_right_to_left(self,
+                             pixel_count,
+                             red=10,
+                             green=10,
+                             blue=10,
+                             speed=0.5):
         self.lightsoff()
         for pos in sorted(list(range(0, self.strand_length)), reverse=True):
+
             self.lightsoff()
             self.ribbon(pixel_count, red, green, blue, pos)
             time.sleep(speed)
@@ -153,4 +170,4 @@ class neopixel_strip:
 if __name__ == "__main__":
     print('Neopixel Demo Starts Now!')
     ns = neopixel_strip()
-    ns.demo()
+    ns.demo(10)
