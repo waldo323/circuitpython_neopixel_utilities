@@ -36,9 +36,10 @@ class neopixel_strip:
         # while 1:
         lightnum = random.randint(0, self.strand_length-1)
 
-        red = random.randint(0, 5)
-        green = random.randint(0, 5)
-        blue = random.randint(0, 5)
+        red = random.randint(0, 255)
+        green = random.randint(0, 255)
+        blue = random.randint(0, 255)
+        self.pixels.brightness(0.0, 1.0)
         self.lightup(lightnum, red, green, blue)
         time.sleep(.1)
 
